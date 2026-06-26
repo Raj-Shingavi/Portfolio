@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Raj Shingavi - Aspiring Data Scientist & Software Engineer. Portfolio showcasing projects, skills, certifications, and experience in Python, AWS, Django, and Data Science.">
+    <meta name="keywords"
+        content="Raj Shingavi, Portfolio, Data Scientist, Software Engineer, Python, AWS, Django, Machine Learning">
+    <meta name="author" content="Raj Shingavi">
+    <title>Raj Shingavi | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursorFollower"></div>
+
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>RS<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#education" class="nav-link" data-section="education">Education</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#certifications" class="nav-link" data-section="certifications">Certifications</a></li>
+
+                <li><a href="#techstack" class="nav-link" data-section="techstack">Tech Stack</a></li>
+                <li><a href="#profiles" class="nav-link" data-section="profiles">Profiles</a></li>
+
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HOME ==================== -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-content">
+            <div class="hero-text-wrapper">
+                <div class="hero-greeting reveal-text">
+                    <span class="greeting-wave">👋</span> Hello, I'm
+                </div>
+                <h1 class="hero-name glitch-text" data-text="Raj Shingavi">
+                    <span class="name-first">Raj</span> <span class="name-last">Shingavi</span>
+                </h1>
+                <div class="hero-typewriter">
+                    <span class="typewriter-static">I'm a </span>
+                    <span class="typewriter-text" id="typewriterText"></span>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Aspiring Data Scientist & Software Engineer crafting intelligent systems
+                    with <span class="highlight-text">Python</span>, <span class="highlight-text">AWS</span>,
+                    and <span class="highlight-text">Machine Learning</span>.
+                </p>
+                <div class="hero-cta">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/Raj-Shingavi" target="_blank" class="social-icon" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/raj-shingavi" target="_blank" class="social-icon"
+                        aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="mailto:rajshingavi26@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-avatar-ring">
+                    <div class="ring ring-1"></div>
+                    <div class="ring ring-2"></div>
+                    <div class="ring ring-3"></div>
+                    <div class="avatar-placeholder">
+                        <div class="avatar-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="floating-badge badge-1">
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
+                </div>
+                <div class="floating-badge badge-2">
+                    <i class="fab fa-aws"></i>
+                    <span>AWS</span>
+                </div>
+                <div class="floating-badge badge-3">
+                    <i class="fas fa-brain"></i>
+                    <span>ML</span>
+                </div>
+                <div class="floating-badge badge-4">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;about&gt;</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-content reveal-left">
+                    <p class="about-text">
+                        I'm a <strong>3rd year B.E. Computer Engineering</strong> student at
+                        <strong>Nutan Maharashtra Institute of Engineering and Technology</strong>, Pune.
+                        I'm passionate about building intelligent, data-driven systems that solve real-world problems.
+                    </p>
+                    <p class="about-text">
+                        With hands-on experience in <strong>Python development</strong>, <strong>AWS cloud
+                            services</strong>,
+                        and <strong>data analytics</strong>, I've built everything from AI-powered satellite monitoring
+                        tools
+                        to educational networking platforms. I thrive at the intersection of software engineering and
+                        data science.
+                    </p>
+                    <p class="about-text">
+                        Currently seeking <strong>Software Engineer Intern</strong>, <strong>Cloud Intern</strong>, or
+                        <strong>Backend Developer Intern</strong> roles where I can contribute and grow.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="2">0</span>
+                            <span class="stat-label">Projects Built</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="5">0</span>
+                            <span class="stat-label">Certifications</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="1">0</span>
+                            <span class="stat-label">Internship</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-number" data-count="7.9" data-decimal="true">0</span>
+                            <span class="stat-label">CGPA</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-info reveal-right">
+                    <div class="info-card">
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-user"></i> Name</span>
+                            <span class="info-value">Raj Rahul Shingavi</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                            <span class="info-value">Pune, Maharashtra</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-graduation-cap"></i> Degree</span>
+                            <span class="info-value">B.E. Computer Engineering</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-envelope"></i> Email</span>
+                            <span class="info-value">rajshingavi26@gmail.com</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-phone"></i> Phone</span>
+                            <span class="info-value">+91 8468843585</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label"><i class="fas fa-briefcase"></i> Looking For</span>
+                            <span class="info-value">Internship / Entry Level</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EDUCATION ==================== -->
+    <section id="education" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;education&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item reveal-up" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge">Current</div>
+                        <h3>B.E. in Computer Engineering</h3>
+                        <h4>Nutan Maharashtra Institute of Engineering and Technology</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-award"></i> CGPA: 7.90 (Till 5th Sem)</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>Diploma in Computer Engineering</h3>
+                        <h4>Rasiklal M. Dhariwal Institute of Technology</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-calendar"></i> 2021 – 2024</span>
+                            <span><i class="fas fa-award"></i> Percentage: 81.49%</span>
+                        </p>
+                    </div>
+                </div>
+                <div class="timeline-item reveal-up" data-aos="fade-up">
+                    <div class="timeline-marker">
+                        <i class="fas fa-school"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>ICSE</h3>
+                        <h4>Spicer Higher Secondary School</h4>
+                        <p class="timeline-meta">
+                            <span><i class="fas fa-calendar"></i> 2020 – 2021</span>
+                            <span><i class="fas fa-award"></i> Percentage: 77.8%</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TECHNICAL SKILLS ==================== -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;skills&gt;</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-code"></i></div>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="90">Python</span>
+                        <span class="skill-tag" data-level="70">Java</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend / APIs</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="80">FastAPI</span>
+                        <span class="skill-tag" data-level="85">Django</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-cloud"></i></div>
+                        <h3>Cloud</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="75">AWS EC2</span>
+                        <span class="skill-tag" data-level="75">AWS S3</span>
+                        <span class="skill-tag" data-level="70">AWS RDS</span>
+                        <span class="skill-tag" data-level="70">AWS VPC</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-brain"></i></div>
+                        <h3>Data / ML</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="85">NumPy</span>
+                        <span class="skill-tag" data-level="85">Pandas</span>
+                        <span class="skill-tag" data-level="80">Matplotlib</span>
+                        <span class="skill-tag" data-level="75">Scikit Learn</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-database"></i></div>
+                        <h3>Databases</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="85">MySQL</span>
+                        <span class="skill-tag" data-level="75">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-tools"></i></div>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="85">Git</span>
+                        <span class="skill-tag" data-level="85">GitHub</span>
+                        <span class="skill-tag" data-level="70">Tableau</span>
+                    </div>
+                </div>
+                <div class="skill-category reveal-up">
+                    <div class="skill-category-header">
+                        <div class="skill-icon"><i class="fas fa-robot"></i></div>
+                        <h3>ML Algorithms</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag" data-level="75">Linear Regression</span>
+                        <span class="skill-tag" data-level="75">Decision Tree</span>
+                        <span class="skill-tag" data-level="70">LSTM</span>
+                        <span class="skill-tag" data-level="70">GRU</span>
+                        <span class="skill-tag" data-level="75">Random Forest</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;experience&gt;</span>
+                <h2 class="section-title">Work <span class="gradient-text">Experience</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="experience-card reveal-up">
+                <div class="exp-header">
+                    <div class="exp-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="exp-title-group">
+                        <h3>Python Developer Intern</h3>
+                        <h4>Prepway Solutions Pvt. Ltd.</h4>
+                    </div>
+                    <div class="exp-date">
+                        <i class="fas fa-calendar-alt"></i>
+                        Jan 2026 – Mar 2026
+                    </div>
+                </div>
+                <div class="exp-tech-tags">
+                    <span>Python</span>
+                    <span>NumPy</span>
+                    <span>Pandas</span>
+                    <span>Matplotlib</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>MySQL</span>
+                    <span>MongoDB</span>
+                    <span>Django</span>
+                </div>
+                <ul class="exp-bullets">
+                    <li>Built Python scripts and backend modules for data preprocessing and REST API logic.</li>
+                    <li>Performed exploratory data analysis and basic machine learning workflows using NumPy, Pandas,
+                        and Matplotlib.</li>
+                    <li>Integrated MySQL and MongoDB and followed Git-based collaboration workflows.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;projects&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card reveal-up" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Raj-Shingavi/Eclipse-AI" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">ECLIPSE AI</h3>
+                    <p class="project-date"><i class="fas fa-calendar"></i> Aug 2025 – Oct 2025</p>
+                    <p class="project-description">
+                        An AI-powered system to monitor satellites and analyze space debris to predict collision risks
+                        in Low Earth Orbit.
+                    </p>
+                    <ul class="project-features">
+                        <li>Real-time processing using Two-Line Element (TLE) data from CelesTrak</li>
+                        <li>Visualized close approaches between orbital objects</li>
+                        <li>Data pipelines using NumPy and Pandas with MySQL storage</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>NumPy</span>
+                        <span>Pandas</span>
+                        <span>MySQL</span>
+                        <span>CelesTrak API</span>
+                    </div>
+                </div>
+                <div class="project-card reveal-up" data-tilt>
+                    <div class="project-glow"></div>
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Raj-Shingavi/Eduquery" target="_blank" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">EDUQUERY</h3>
+                    <p class="project-date"><i class="fas fa-calendar"></i> Jan 2026 – Mar 2026</p>
+                    <p class="project-description">
+                        A role-based educational networking platform enabling structured interaction between students
+                        and verified teachers.
+                    </p>
+                    <ul class="project-features">
+                        <li>Tech Communities & Teacher Endorsement System</li>
+                        <li>Real-time polling system with one-vote-per-user constraint</li>
+                        <li>Optimized MySQL database with complex relationships</li>
+                    </ul>
+                    <div class="project-tech">
+                        <span>Django</span>
+                        <span>MySQL</span>
+                        <span>Python</span>
+                        <span>REST API</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CERTIFICATIONS ==================== -->
+    <section id="certifications" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;certifications&gt;</span>
+                <h2 class="section-title">My <span class="gradient-text">Certifications</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card reveal-up" data-cert="assets/cert_1.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_1.png" alt="AWS Cloud Practitioner Essentials Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fab fa-aws"></i></div>
+                        <h3>AWS Cloud Practitioner Essentials</h3>
+                        <p class="cert-issuer">AWS Training & Certification</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> February 2026</p>
+                        <p class="cert-desc">Core AWS services including EC2, S3, VPC, Subnets and Cloud fundamentals.
+                        </p>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" data-cert="assets/cert_2.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_2.png" alt="Machine Learning A-Z Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fas fa-brain"></i></div>
+                        <h3>Machine Learning A-Z</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> January 2026</p>
+                        <p class="cert-desc">ML fundamentals, data preprocessing, model building, evaluation and
+                            deployment.</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" data-cert="assets/cert_3.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_3.png" alt="Complete MySQL Bootcamp Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fas fa-database"></i></div>
+                        <h3>The Complete MySQL Bootcamp</h3>
+                        <p class="cert-issuer">Udemy</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> January 2026</p>
+                        <p class="cert-desc">Advanced SQL queries, joins, indexing, relational database design and
+                            optimization.</p>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" data-cert="assets/cert_4.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_4.png" alt="Big Data Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fas fa-chart-bar"></i></div>
+                        <h3>Big Data</h3>
+                        <p class="cert-issuer">Wingspan</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> April 2026</p>
+                        <p class="cert-desc">Comprehensive Big Data concepts, frameworks, and data processing at scale.
+                        </p>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" data-cert="assets/cert_5.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_5.png" alt="Data Visualization Techniques Certificate" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fas fa-chart-line"></i></div>
+                        <h3>Data Visualization Techniques</h3>
+                        <p class="cert-issuer">Wingspan</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> April 2026</p>
+                        <p class="cert-desc">Data visualization best practices, chart types, and storytelling with data.
+                        </p>
+                    </div>
+                </div>
+                <div class="cert-card reveal-up" data-cert="assets/cert_6.png">
+                    <div class="cert-preview">
+                        <img src="assets/cert_6.png" alt="Internship Certificate - Prepway Solutions" loading="lazy">
+                        <div class="cert-overlay">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Hover to preview</span>
+                        </div>
+                    </div>
+                    <div class="cert-info">
+                        <div class="cert-badge"><i class="fas fa-briefcase"></i></div>
+                        <h3>Internship Certificate</h3>
+                        <p class="cert-issuer">Prepway Solutions Pvt. Ltd.</p>
+                        <p class="cert-date"><i class="fas fa-calendar"></i> March 2026</p>
+                        <p class="cert-desc">Python Data Science and Machine Learning internship completion certificate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Certificate Hover Preview -->
+        <div class="cert-hover-preview" id="certHoverPreview">
+            <img id="certHoverImage" src="" alt="Certificate Preview">
+        </div>
+    </section>
+
+    <!-- ==================== TECH STACK ==================== -->
+    <section id="techstack" class="section section-alt">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;tech-stack&gt;</span>
+                <h2 class="section-title">Tech <span class="gradient-text">Stack</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="techstack-orbit">
+                <div class="orbit-center">
+                    <span>My<br>Stack</span>
+                </div>
+                <div class="tech-items-grid">
+                    <div class="tech-item reveal-up" data-tech="python">
+                        <div class="tech-item-inner">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="java">
+                        <div class="tech-item-inner">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="django">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-fire"></i>
+                            <span>Django</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="fastapi">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-bolt"></i>
+                            <span>FastAPI</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="aws">
+                        <div class="tech-item-inner">
+                            <i class="fab fa-aws"></i>
+                            <span>AWS</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="mysql">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="mongodb">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-leaf"></i>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="numpy">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-square-root-variable"></i>
+                            <span>NumPy</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="pandas">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-table"></i>
+                            <span>Pandas</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="matplotlib">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-chart-area"></i>
+                            <span>Matplotlib</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="80"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="sklearn">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-brain"></i>
+                            <span>Scikit Learn</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="75"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="git">
+                        <div class="tech-item-inner">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                    <div class="tech-item reveal-up" data-tech="tableau">
+                        <div class="tech-item-inner">
+                            <i class="fas fa-chart-pie"></i>
+                            <span>Tableau</span>
+                        </div>
+                        <div class="tech-bar">
+                            <div class="tech-bar-fill" data-width="70"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GITHUB & CODING PROFILES ==================== -->
+    <section id="profiles" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;profiles&gt;</span>
+                <h2 class="section-title">Coding <span class="gradient-text">Profiles</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="profiles-grid">
+                <a href="https://github.com/Raj-Shingavi" target="_blank" class="profile-card reveal-up">
+                    <div class="profile-card-bg"></div>
+                    <div class="profile-icon github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p class="profile-handle">@Raj-Shingavi</p>
+                    <p class="profile-desc">Source code, projects, and open source contributions</p>
+                    <div class="profile-link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://linkedin.com/in/raj-shingavi" target="_blank" class="profile-card reveal-up">
+                    <div class="profile-card-bg"></div>
+                    <div class="profile-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p class="profile-handle">@raj-shingavi</p>
+                    <p class="profile-desc">Professional network, experience, and recommendations</p>
+                    <div class="profile-link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="mailto:rajshingavi26@gmail.com" class="profile-card reveal-up">
+                    <div class="profile-card-bg"></div>
+                    <div class="profile-icon email-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p class="profile-handle">rajshingavi26@gmail.com</p>
+                    <p class="profile-desc">Direct communication for opportunities and collaborations</p>
+                    <div class="profile-link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://leetcode.com/u/9hBopE2UMS/" target="_blank" class="profile-card reveal-up">
+                    <div class="profile-card-bg"></div>
+                    <div class="profile-icon leetcode-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>LeetCode</h3>
+                    <p class="profile-handle">@9hBopE2UMS</p>
+                    <p class="profile-desc">Data structures, algorithms, and competitive programming practice</p>
+                    <div class="profile-link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+                <a href="https://www.codechef.com/users/rajshingavi26" target="_blank" class="profile-card reveal-up">
+                    <div class="profile-card-bg"></div>
+                    <div class="profile-icon codechef-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>CodeChef</h3>
+                    <p class="profile-handle">@rajshingavi26</p>
+                    <p class="profile-desc">Competitive programming contests and problem solving</p>
+                    <div class="profile-link-arrow">
+                        <i class="fas fa-external-link-alt"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">&lt;contact&gt;</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-info-centered reveal-up">
+                    <h3>Let's work together</h3>
+                    <p>I'm always open to discussing new opportunities, collaborations, or just having a tech
+                        conversation. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:rajshingavi26@gmail.com">rajshingavi26@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <a href="tel:+918468843585">+91 8468843585</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <span>Pune, Maharashtra, India</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">&lt;</span>RS<span class="logo-bracket">/&gt;</span>
+                </div>
+                <p class="footer-text">Designed & Built by Raj Shingavi</p>
+                <div class="footer-social">
+                    <a href="https://github.com/Raj-Shingavi" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/raj-shingavi" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:rajshingavi26@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p class="footer-copyright">&copy; 2026 Raj Shingavi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
