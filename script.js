@@ -504,3 +504,46 @@ function initSmoothScroll() {
         });
     });
 }
+
+/* ==========================================
+   CERTIFICATE HOVER PREVIEW & CLICK TO OPEN
+   ========================================== */
+function initCertHoverPreview() {
+    const certCards = document.querySelectorAll('.cert-card[data-cert]');
+    const hoverPreview = document.getElementById('certHoverPreview');
+    const hoverImage = document.getElementById('certHoverImage');
+
+    certCards.forEach(card => {
+        const certPath = card.getAttribute('data-cert');
+
+        // Make the card look clickable
+        card.style.cursor = 'pointer';
+
+        // Click to open certificate in new tab
+        card.addEventListener('click', (e) => {
+            // Don't interfere with links inside the card (like the PDF overlay link)
+            if (e.target.closest('a')) return;
+            window.open(certPath, '_blank');
+        });
+
+        // Hover preview for image certificates (skip PDFs)
+        if (certPath && !certPath.endsWith('.pdf') && hoverPreview && hoverImage) {
+            card.addEventListener('mouseenter', () => {
+                hoverImage.src = certPath;
+                hoverPreview.classList.add('visible');
+            });
+
+            card.addEventListener('mousemove', (e) => {
+                const x = e.clientX + 20;
+                const y = e.clientY - 100;
+                hoverPreview.style.left = x + 'px';
+                hoverPreview.style.top = y + 'px';
+            });
+
+            card.addEventListener('mouseleave', () => {
+                hoverPreview.classList.remove('visible');
+                hoverImage.src = '';
+            });
+        }
+    });
+}
